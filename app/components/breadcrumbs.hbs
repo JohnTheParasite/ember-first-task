@@ -1,0 +1,18 @@
+<div class="breadcrumbs">
+
+  {{this.getRouter}}
+  {{#if this.isIndexPage}}
+    Index
+  {{else}}
+    <LinkTo @route="index">Index</LinkTo>
+    >
+    {{#if this.isFirstPage}}
+      {{this.getCurrentRouteName}}
+    {{else}}
+      <LinkTo @route={{this.getParentRouteName}}>{{this.getProperParentRouteName}}</LinkTo>
+      >
+      {{this.getCurrentRouteName}}
+    {{/if}}
+  {{/if}}
+
+</div>

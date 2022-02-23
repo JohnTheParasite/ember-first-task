@@ -1,0 +1,77 @@
+{{page-title "First task"}}
+
+<nav class="content-block">
+
+  <LinkTo @route="index">
+    <a><h2>Home</h2></a>
+  </LinkTo>
+
+  <ul>
+    <li>
+      <LinkTo @route="news">
+        <a><h3>News</h3></a>
+      </LinkTo>
+      <ul>
+        <li>
+          <LinkTo @route="news.business">
+            <a>Business</a>
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="news.culture">
+            <a>Culture</a>
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="news.design">
+            <a>Design</a>
+          </LinkTo>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <LinkTo @route="blogs">
+        <a><h3>Blog</h3></a>
+      </LinkTo>
+      <ul>
+        <li>
+          <LinkTo @route="blogs.social">
+            <a>Social</a>
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="blogs.startups">
+            <a>Startups</a>
+          </LinkTo>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <LinkTo @route="forums">
+        <a><h3>Forum</h3></a>
+      </LinkTo>
+      <ul>
+        <li>
+          <LinkTo @route="forums.ideas">
+            <a>Ideas</a>
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="forums.technologies">
+            <a>Technologies</a>
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="forums.startups">
+            <a>Startups</a>
+          </LinkTo>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</nav>
+
+<Breadcrumbs></Breadcrumbs>
+
+{{outlet}}

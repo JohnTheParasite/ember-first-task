@@ -1,0 +1,38 @@
+@import "app/components/breadcrumbs";
+
+:root {
+  --font-family-sans-serif: "Montserrat", Helvetica, Arial, serif;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+  letter-spacing: 0.01rem;
+  font-family: sans-serif;
+  line-height: 1.15;
+}
+
+body {
+  padding: 30px 30px 0 30px;
+  overflow-x: hidden;
+  text-align: left;
+  background-color: #f8f8f8;
+  direction: ltr;
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: #6e6b7b;
+}
+
+.content-block {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #4470c4;
+  border: 5px solid #2d508f;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
