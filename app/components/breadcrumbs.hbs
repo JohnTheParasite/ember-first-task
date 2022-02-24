@@ -1,17 +1,22 @@
 <div class="breadcrumbs">
-
-  {{this.getRouter}}
   {{#if this.isIndexPage}}
-    Index
+    Home
   {{else}}
-    <LinkTo @route="index">Index</LinkTo>
+    <LinkTo @route="index">Home</LinkTo>
     >
-    {{#if this.isFirstPage}}
-      {{this.getCurrentRouteName}}
-    {{else}}
-      <LinkTo @route={{this.getParentRouteName}}>{{this.getProperParentRouteName}}</LinkTo>
+    {{#if this.isSingleItem}}
+      <LinkTo @route={{this.attributeSection}}>{{this.attributeSectionProper}}</LinkTo>
       >
-      {{this.getCurrentRouteName}}
+      <LinkTo @route={{this.attributeSectionCategory}}>{{this.attributeCategoryProper}}</LinkTo>
+      > {{this.attributeId}}
+    {{else}}
+      {{#if this.isFirstPage}}
+        {{this.getCurrentRouteName}}
+      {{else}}
+        <LinkTo @route={{this.getParentRouteName}}>{{this.getProperParentRouteName}}</LinkTo>
+        >
+        {{this.getCurrentRouteName}}
+      {{/if}}
     {{/if}}
   {{/if}}
 

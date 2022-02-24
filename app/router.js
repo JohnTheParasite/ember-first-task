@@ -21,5 +21,6 @@ Router.map(function () {
     this.route('technologies');
     this.route('startups');
   });
-  this.route('not-found', { path: '/*path' });
+  this.route('not-found', {path: '/*path'});
+  this.route('post_item', {path: '/:section/:category/:id'});
 });

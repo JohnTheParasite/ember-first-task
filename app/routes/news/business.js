@@ -1,11 +1,16 @@
 import Route from '@ember/routing/route';
-import { service } from '@ember/service';
 
 export default class NewsBusinessRoute extends Route {
-  @service router;
+  async model(params) {
+    const response = await fetch('/api/news/business');
+    let parsed = [];
+    if (response) {
+      parsed = await response.json();
+      parsed.sort((a, b) => (a.date < b.date ? 1 : -1));
+    }
 
-  model() {
-    //console.log(this.router);
-    return 1;
+    return {
+      posts: parsed,
+    };
   }
 }

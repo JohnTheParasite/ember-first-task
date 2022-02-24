@@ -1,3 +1,4 @@
 import Route from '@ember/routing/route';
 
-export default class ForumsRoute extends Route {}
+export default class ForumsRoute extends Route {
+}

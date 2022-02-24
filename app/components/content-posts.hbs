@@ -1,0 +1,19 @@
+<div class="message-container">
+  {{#if @posts.length}}
+    {{#each @posts as |data|}}
+      {{#if data.id}}
+        <LinkTo @route="post_item" @models={{array @section data.category data.id}}>
+          <div class="header">{{data.title}}</div>
+        </LinkTo>
+      {{else}}
+        <div class="header">{{data.title}}</div>
+      {{/if}}
+      <div class="message">
+        <div class="post-date">{{data.date}}</div>
+        {{data.body}}
+      </div>
+    {{/each}}
+  {{else}}
+    <label>No posts available</label>
+  {{/if}}
+</div>

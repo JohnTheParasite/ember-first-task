@@ -1,8 +1,8 @@
 import Route from '@ember/routing/route';
 
-export default class BlogsStartupsRoute extends Route {
+export default class NewsIndexRoute extends Route {
   async model() {
-    const response = await fetch('/api/blogs/startups');
+    const response = await fetch('/api/news');
     let parsed = [];
     if (response) {
       parsed = await response.json();
