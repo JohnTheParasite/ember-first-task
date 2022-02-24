@@ -77,4 +77,36 @@ export default class breadcrumbs extends Component {
         return routeName;
     }
   }
+
+  get isSingleItem() {
+    return this.router.currentRouteName === 'post_item';
+  }
+
+  get attributeSection() {
+    return this.router.currentRoute.params.section;
+  }
+
+  get attributeSectionProper() {
+    return this.getProperName(this.router.currentRoute.params.section);
+  }
+
+  get attributeCategory() {
+    return this.router.currentRoute.params.category;
+  }
+
+  get attributeCategoryProper() {
+    return this.getProperName(this.router.currentRoute.params.category);
+  }
+
+  get attributeSectionCategory() {
+    return (
+      this.router.currentRoute.params.section +
+      '.' +
+      this.router.currentRoute.params.category
+    );
+  }
+
+  get attributeId() {
+    return this.router.currentRoute.params.id;
+  }
 }

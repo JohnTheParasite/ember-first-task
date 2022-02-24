@@ -6,7 +6,7 @@ export default class ForumsStartupsRoute extends Route {
     let parsed = [];
     if (response) {
       parsed = await response.json();
-      parsed.sort((a, b) => a.category > b.category ? 1 : -1);
+      parsed.sort((a, b) => (a.date < b.date ? 1 : -1));
     }
 
     return {
