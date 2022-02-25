@@ -31,6 +31,13 @@ export default function () {
         body: 'culture body blah blah blah',
         category: 'culture',
       },
+      {
+        id: 5,
+        date: '2013-10-05',
+        title: 'Some kind of design topic',
+        body: 'This is design topic for demonstrating how this works',
+        category: 'design',
+      }
     ];
   });
 
@@ -63,8 +70,10 @@ export default function () {
   this.get('/news/design', () => {
     return [
       {
-        title: 'You Could Play This Jigsaw Puzzle Forever and Never Finish',
-        body: 'THE JOY OF any good jigsaw puzzle isn’t finishing it, it’s the satisfaction of linking pieces, one fit at a time. With the Infinite Galaxy Puzzle, which you can assemble in any direction and in countless shapes, that sensation need never end. Granted, that lack of resolution may make you crazy. But it makes the Infinite Galaxy Puzzle from Nervous System a unique contribution to the cannon.\nYou’d expect nothing less from its creators, who have spent “five or six” years making jigsaw puzzles. Founders Jesse Louis-Rosenberg and Jessica Rosenkrantz use custom software to create their designs and a laser cutter to bring them to life. “It harkens back to when puzzles were hand-cut and had a lot more individual style,” Louis-Rosenberg says.',
+        id: 5,
+        date: '2013-10-05',
+        title: 'Some kind of design topic',
+        body: 'This is design topic for demonstrating how this works',
         category: 'design',
       },
     ];
